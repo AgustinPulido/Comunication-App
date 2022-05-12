@@ -1,0 +1,17 @@
+<div class='row d-flex justify-content-around' style="margin: 0px!important;">
+<mat-card *ngFor='let user of users'>
+    <div class="d-flex justify-content-center">
+        <img [src]='user.picture.large' alt='logo' style='border-radius: 50%;'>
+    </div>
+    <div class="d-flex justify-content-center" style="margin-top: 15px;">
+        <h2>{{user.name.first}} {{user.name.last}}</h2>
+    </div>
+    <div>
+        <p>Genero: {{user.gender}}</p>
+        <p>Email: {{user.email}}</p>
+        <p>Celular: {{user.cell}}</p>
+        <p>Ciudad: {{user.location.city}}</p>
+        <p>Pais: {{user.location.country}}</p>
+    </div>
+</mat-card>
+</div>

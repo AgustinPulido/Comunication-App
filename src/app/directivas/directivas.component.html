@@ -1,0 +1,39 @@
+<div style="margin-top: 25px; margin-left: 50px; margin-right: 50px;">
+    <table *ngIf='indicators' class="table table-hover table-striped">
+        <thead>
+            <tr>
+                <th [width]='200'>Indicadores</th>
+                <th [width]='100'>Anterior</th>
+                <th [width]='100'>Actual</th>
+                <th [width]='350'>Nuevo valor</th>
+                <th [width]='150'>Informar</th>
+                <th [width]='100'>Indice</th>
+            </tr>
+        </thead>
+        <tbody style="overflow: auto">
+            <tr *ngFor='let indicador of indicators; let i = index'>
+                <td>
+                    {{indicador.name}}
+                </td>
+                <td>
+                    {{indicador.penultimate}}
+                </td>
+                <td>
+                    {{indicador.ultimate}}
+                </td>
+                <td>
+                    <mat-form-field>
+                        <!-- <mat-label>Value:</mat-label> -->
+                        <input matInput [(ngModel)]="values[i]" type="number">
+                    </mat-form-field>
+                </td>
+                <td>
+                    <button (click)='update(i, values[i])' class="button">Enviar</button>
+                </td>
+                <td>
+                    {{i}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

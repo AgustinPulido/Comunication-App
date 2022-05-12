@@ -3,16 +3,48 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { InputExampleComponent } from './input-example/input-example.component';
+import { OutputExampleComponent } from './output-example/output-example.component';
+import { ViewchildExampleComponent } from './viewchild-example/viewchild-example.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTabsModule } from '@angular/material/tabs';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { DirectivasComponent } from './directivas/directivas.component';
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { ChildComponent } from './input-example/child/child.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { MatCardModule } from '@angular/material/card';
+import { Child2Component } from './output-example/child2/child2.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    InputExampleComponent,
+    OutputExampleComponent,
+    ViewchildExampleComponent,
+    HeaderComponent,
+    FooterComponent,
+    DirectivasComponent,
+    ChildComponent,
+    Child2Component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatTabsModule,
+    FormsModule,
+    MatInputModule,
+    HttpClientModule,
+    MatCardModule
   ],
-  providers: [],
+  providers: [HttpClient],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
