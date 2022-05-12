@@ -19,6 +19,7 @@ import { ChildComponent } from './input-example/child/child.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
 import { Child2Component } from './output-example/child2/child2.component';
+import { Child3Component } from './viewchild-example/child3/child3.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { Child2Component } from './output-example/child2/child2.component';
     FooterComponent,
     DirectivasComponent,
     ChildComponent,
-    Child2Component
+    Child2Component,
+    Child3Component
   ],
   imports: [
     BrowserModule,
