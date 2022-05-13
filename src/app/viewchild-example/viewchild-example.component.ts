@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit, TemplateRef } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Child3Component } from './child3/child3.component';
 
 @Component({
@@ -9,14 +10,22 @@ import { Child3Component } from './child3/child3.component';
 export class ViewchildExampleComponent implements AfterViewInit {
 
   @ViewChild(Child3Component) child: Child3Component;
+  @ViewChild('ModalComponent') modal: TemplateRef<any>;
 
-  constructor() { }
+  constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
   ngAfterViewInit() {
     console.log(this.child.whoAmI()); // I am a child component!
+  }
+
+  openModal(): void {
+    let dialogRef = this.dialog.open(this.modal, { disableClose: false });
+    dialogRef.afterClosed().subscribe((result) => {
+      console.log(result);
+    });
   }
 
 }

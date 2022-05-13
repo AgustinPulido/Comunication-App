@@ -1,1 +1,30 @@
 <app-child3></app-child3>
+
+<button mat-raised-button color="accent" (click)='openModal()'>Modal</button>
+
+<ng-template #ModalComponent>
+    <div mat-dialog-content style='width: 900px!important;'>
+        <h4 class='indicatorTitle'>Nombre</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre del proyecto</th>
+                    <th>Valor</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody style="overflow: auto">
+                <tr>
+                    <td>Nombre</td>
+                    <td>
+                        <p>15</p>
+                    </td>
+                    <td>12/08/2022</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <mat-dialog-actions class='d-flex justify-content-center' style="margin-bottom: 10px;">
+        <button mat-button matDialogClose="no" class="cancel-button">Cancelar</button>
+    </mat-dialog-actions>
+</ng-template>

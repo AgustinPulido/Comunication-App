@@ -13,7 +13,7 @@ export class Child3Component implements OnInit {
   }
 
   whoAmI() {
-    return 'I am a child component!';
+    return 'I am a child component using ViewChild! (component child3)';
   }
 
 }
