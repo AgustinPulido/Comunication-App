@@ -22,6 +22,7 @@ import { Child2Component } from './output-example/child2/child2.component';
 import { Child3Component } from './viewchild-example/child3/child3.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
+import { TestComponent } from './test/test.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { MatButtonModule } from '@angular/material/button';
     ChildComponent,
     Child2Component,
     Child3Component,
+    TestComponent,
   ],
   imports: [
     BrowserModule,

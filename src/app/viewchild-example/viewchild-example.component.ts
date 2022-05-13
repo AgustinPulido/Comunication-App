@@ -17,12 +17,12 @@ export class ViewchildExampleComponent implements AfterViewInit {
   ngOnInit(): void {
   }
 
-  ngAfterViewInit() {
+  ngAfterViewInit(): void {
     console.log(this.child.whoAmI()); // I am a child component!
   }
 
   openModal(): void {
-    let dialogRef = this.dialog.open(this.modal, { disableClose: false });
+    let dialogRef = this.dialog.open(this.modal, { disableClose: true });
     dialogRef.afterClosed().subscribe((result) => {
       console.log(result);
     });
